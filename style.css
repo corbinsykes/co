@@ -49,6 +49,20 @@
     background-image: url('assets/buster_keaton.gif');
 }
 
+@keyframes color-rotate {
+    0% {
+        filter: brightness(0.667) hue-rotate(0deg);
+    }
+
+    50% {
+        filter: brightness(0.75) hue-rotate(360deg);
+    }
+
+    100% {
+        filter: brightness(0.667) hue-rotate(0deg);
+    }
+}
+
 .Splash__video {
     filter: brightness(0.667);
     position: fixed;
@@ -58,6 +72,7 @@
     left: -125%;
     min-height: 100%;
     min-width: 100%;
+    animation: color-rotate 30s infinite linear;
 }
 
 .Splash__text,
