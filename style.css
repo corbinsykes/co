@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'CMU Typewriter';
+    src: url(assets/cmunbtl.ttf) format('truetype');
+}
+
 :root {
     --white: #FFF;
-    --green: #33E866;
+    --highlight: #9EF0C0;
     --shadow: #283229;
 
     --text-shadow: 1px 1px;
+
+    --font: 'CMU Typewriter';
 }
 
 .Splash,
@@ -36,14 +43,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition: filter 0.375s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
 .Splash__content--404 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     background-image: url('assets/buster_keaton.gif');
 }
 
@@ -60,18 +62,33 @@
 
 .Splash__text,
 .Splash__icon {
-    color: #fff;
+    color: var(--white);
     font-size: 1rem;
     line-height: 1.5rem;
-    text-shadow: 1px 1px #283229;
-    transition: text-shadow 0.5s ease;
+    text-shadow: var(--text-shadow) var(--shadow);
+    transition: color 0.5s ease-in-out;
 }
 
 .Splash__text {
-    font-family: 'Cutive Mono';
+    font-family: var(--font);
     position: relative;
     text-align: center;
     max-width: calc(100% - 1rem);
+    letter-spacing: 0.1ch;
+}
+
+.Splash__text--title {
+    text-transform: uppercase;
+    animation: fade-in-down 1.5s ease-in;
+    animation-fill-mode: both;
+}
+
+.Splash__text--title:nth-of-type(2) {
+    animation-delay: 2s;
+}
+
+.Splash__text--title:nth-of-type(3) {
+    animation-delay: 4.5s;
 }
 
 .Splash__links {
@@ -83,12 +100,58 @@
     gap: 0.75rem;
     cursor: pointer;
     position: relative;
+    animation: fade-in-up 1s ease-out;
+    animation-fill-mode: both;
+}
+
+.Splash__link--1 {
+    animation-delay: 7s;
+}
+
+.Splash__link--2 {
+    animation-delay: 7.5s;
+}
+
+.Splash__link--3 {
+    animation-delay: 8s;
+}
+
+.Splash__link--4 {
+    animation-delay: 8.5s;
+}
+
+.Splash__link--5 {
+    animation-delay: 9s;
 }
 
 .Splash__link:hover .Splash__text,
 .Splash__link:hover .Splash__icon {
-    color: #fff;
-    text-shadow: 1px 1px #33E866;
+    color: var(--highlight);
+    /* text-shadow: var(--text-shadow) var(--white); */
+}
+
+@keyframes fade-in-down {
+    0% {
+        transform: translate3d(0, -1rem, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        transform: translate3d(0, 0.75rem, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width: 768px) {
