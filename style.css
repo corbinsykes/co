@@ -1,0 +1,121 @@
+:root {
+    --white: #FFF;
+    --green: #33E866;
+    --shadow: #283229;
+
+    --text-shadow: 1px 1px;
+    --box-shadow: 0 2px 4px;
+}
+
+.page,
+.content,
+.links,
+.link {
+    display: flex;
+    align-items: center;
+}
+
+.page,
+.content {
+    justify-content: center;
+}
+
+.content,
+.links {
+    flex-direction: column;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: filter 0.375s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+.video {
+    filter: brightness(0.667);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -125%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.text,
+[class^="fa"] {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-shadow: 1px 1px #283229;
+    transition: text-shadow 0.5s ease;
+}
+
+.text {
+    font-family: 'Cutive Mono';
+    position: relative;
+    text-align: center;
+    max-width: calc(100% - 1rem);
+}
+
+.links {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.link {
+    gap: 0.75rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.link:hover .text,
+.link:hover [class^="fa"] {
+    color: #fff;
+    text-shadow: 1px 1px #33E866;
+}
+
+@media screen and (min-width: 768px) {
+    .video {
+        left: -67%;
+    }
+
+    .text--title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .links {
+        flex-direction: row;
+        gap: 2.5rem;
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .video {
+        left: -25%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .text--title {
+        font-size: 1.75rem;
+        line-height: 2.1875rem;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .video {
+        left: 0;
+    }
+}
