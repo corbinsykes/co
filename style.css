@@ -73,6 +73,7 @@
     min-height: 100%;
     min-width: 100%;
     animation: color-rotate 30s infinite linear;
+    animation-delay: 4s;
 }
 
 .Splash__text,
