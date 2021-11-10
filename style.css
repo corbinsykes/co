@@ -4,33 +4,32 @@
     --shadow: #283229;
 
     --text-shadow: 1px 1px;
-    --box-shadow: 0 2px 4px;
 }
 
-.page,
-.content,
-.links,
-.link {
+.Splash,
+.Splash__content,
+.Splash__links,
+.Splash__link {
     display: flex;
     align-items: center;
 }
 
-.page,
-.content {
+.Splash,
+.Splash__content {
     justify-content: center;
 }
 
-.content,
-.links {
+.Splash__content,
+.Splash__links {
     flex-direction: column;
 }
 
-.page {
+.Splash {
     height: 100vh;
     width: 100vw;
 }
 
-.content {
+.Splash__content {
     position: relative;
     height: 100%;
     width: 100%;
@@ -40,7 +39,7 @@
     transition: filter 0.375s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
-.content--404 {
+.Splash__content--404 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +47,7 @@
     background-image: url('assets/buster_keaton.gif');
 }
 
-.video {
+.Splash__video {
     filter: brightness(0.667);
     position: fixed;
     top: 0;
@@ -59,8 +58,8 @@
     min-width: 100%;
 }
 
-.text,
-[class^="fa"] {
+.Splash__text,
+.Splash__icon {
     color: #fff;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -68,41 +67,41 @@
     transition: text-shadow 0.5s ease;
 }
 
-.text {
+.Splash__text {
     font-family: 'Cutive Mono';
     position: relative;
     text-align: center;
     max-width: calc(100% - 1rem);
 }
 
-.links {
+.Splash__links {
     gap: 1.5rem;
     margin-top: 1.5rem;
 }
 
-.link {
+.Splash__link {
     gap: 0.75rem;
     cursor: pointer;
     position: relative;
 }
 
-.link:hover .text,
-.link:hover [class^="fa"] {
+.Splash__link:hover .Splash__text,
+.Splash__link:hover .Splash__icon {
     color: #fff;
     text-shadow: 1px 1px #33E866;
 }
 
 @media screen and (min-width: 768px) {
-    .video {
+    .Splash__video {
         left: -67%;
     }
 
-    .text--title {
+    .Splash__text--title {
         font-size: 1.5rem;
         line-height: 2rem;
     }
 
-    .links {
+    .Splash__links {
         flex-direction: row;
         gap: 2.5rem;
         margin-top: 4rem;
@@ -110,20 +109,20 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .video {
+    .Splash__video {
         left: -25%;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .text--title {
+    .Splash__text--title {
         font-size: 1.75rem;
         line-height: 2.1875rem;
     }
 }
 
 @media screen and (min-width: 1800px) {
-    .video {
+    .Splash__video {
         left: 0;
     }
 }
