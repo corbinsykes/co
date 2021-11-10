@@ -40,6 +40,14 @@
     transition: filter 0.375s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
+.content--404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('assets/buster_keaton.gif');
+}
+
 .video {
     filter: brightness(0.667);
     position: fixed;
