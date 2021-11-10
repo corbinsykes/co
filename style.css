@@ -84,11 +84,11 @@
 }
 
 .Splash__text--title:nth-of-type(2) {
-    animation-delay: 2s;
+    animation-delay: 0.75s;
 }
 
 .Splash__text--title:nth-of-type(3) {
-    animation-delay: 4.5s;
+    animation-delay: 0.75s;
 }
 
 .Splash__links {
@@ -105,23 +105,23 @@
 }
 
 .Splash__link--1 {
-    animation-delay: 7s;
+    animation-delay: 3s;
 }
 
 .Splash__link--2 {
-    animation-delay: 7.5s;
+    animation-delay: 3.5s;
 }
 
 .Splash__link--3 {
-    animation-delay: 8s;
+    animation-delay: 4s;
 }
 
 .Splash__link--4 {
-    animation-delay: 8.5s;
+    animation-delay: 4.5s;
 }
 
 .Splash__link--5 {
-    animation-delay: 9s;
+    animation-delay: 5s;
 }
 
 .Splash__link:hover .Splash__text,
