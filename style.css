@@ -49,22 +49,36 @@
     background-image: url('assets/buster_keaton.gif');
 }
 
-@keyframes color-rotate {
+@keyframes video-rotate {
     0% {
-        filter: brightness(0.667) hue-rotate(0deg);
+        filter: brightness(0.75) hue-rotate(0deg) saturate(1) ;
     }
 
     50% {
-        filter: brightness(0.75) hue-rotate(360deg);
+        filter: brightness(0.75) hue-rotate(360deg) saturate(2);
     }
 
     100% {
-        filter: brightness(0.667) hue-rotate(0deg);
+        filter: brightness(0.75) hue-rotate(0deg) saturate(1);
+    }
+}
+
+@keyframes text-rotate {
+    0% {
+        filter: hue-rotate(0deg) saturate(1) ;
+    }
+
+    50% {
+        filter: hue-rotate(360deg) saturate(2);
+    }
+
+    100% {
+        filter: hue-rotate(0deg) saturate(1);
     }
 }
 
 .Splash__video {
-    filter: brightness(0.667);
+    filter: brightness(0.75);
     position: fixed;
     top: 0;
     right: 0;
@@ -72,7 +86,7 @@
     left: -125%;
     min-height: 100%;
     min-width: 100%;
-    animation: color-rotate 30s infinite ease-in-out;
+    animation: video-rotate 30s infinite ease-in-out;
     animation-delay: 4s;
 }
 
@@ -109,7 +123,7 @@
     gap: 0.75rem;
     cursor: pointer;
     position: relative;
-    animation: fade-in-up 1s ease-out;
+    animation: fade-in-up 1s ease-out, text-rotate 30s ease-in-out;
     animation-fill-mode: both;
 }
 
