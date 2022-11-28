@@ -34,7 +34,7 @@
 .Splash {
     height: 100vh;
     width: 100vw;
-    border: 4rem solid var(--white);
+    border: 2vw solid var(--white);
     filter: brightness(1);
     overflow: hidden;
 }
@@ -89,8 +89,6 @@
     left: -125%;
     min-height: 100%;
     min-width: 100%;
-    /* animation: video-rotate 30s infinite ease-in-out;
-    animation-delay: 4s; */
 }
 
 .Splash__text,
@@ -190,11 +188,6 @@
         left: -67%;
     }
 
-    /* .Splash__text--title {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    } */
-
     .Splash__links {
         flex-direction: row;
         gap: 2.5rem;
@@ -204,7 +197,7 @@
 
 @media screen and (min-width: 1024px) {
     .Splash__video {
-        left: -25%;
+        left: -20%;
     }
 }
 
