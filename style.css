@@ -34,6 +34,9 @@
 .Splash {
     height: 100vh;
     width: 100vw;
+    border: 4rem solid var(--white);
+    filter: brightness(1);
+    overflow: hidden;
 }
 
 .Splash__content {
@@ -78,7 +81,7 @@
 }
 
 .Splash__video {
-    filter: brightness(0.75);
+    filter: brightness(0.5);
     position: fixed;
     top: 0;
     right: 0;
@@ -86,8 +89,8 @@
     left: -125%;
     min-height: 100%;
     min-width: 100%;
-    animation: video-rotate 30s infinite ease-in-out;
-    animation-delay: 4s;
+    /* animation: video-rotate 30s infinite ease-in-out;
+    animation-delay: 4s; */
 }
 
 .Splash__text,
@@ -110,7 +113,7 @@
     font-size: 1.5rem;
     line-height: 2rem;
     text-transform: uppercase;
-    animation: fade-in-down 1.5s ease-in;
+    animation: fade-in-up 1s ease-out;
     animation-fill-mode: both;
 }
 
@@ -128,23 +131,23 @@
 }
 
 .Splash__link--1 {
-    animation-delay: 1.5s;
+    animation-delay: 0.25s;
 }
 
 .Splash__link--2 {
-    animation-delay: 2s;
+    animation-delay: 0.5s;
 }
 
 .Splash__link--3 {
-    animation-delay: 2.5s;
+    animation-delay: 0.75s;
 }
 
 .Splash__link--4 {
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 .Splash__link--5 {
-    animation-delay: 3.5s;
+    animation-delay: 1.25s;
 }
 
 .Splash__link:hover .Splash__text,
